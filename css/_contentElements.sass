@@ -1,0 +1,91 @@
+@import mixins
+.kartinka
+  display: block
+  width: 70%
+  margin: 15px auto
+  box-shadow: 5px 5px 20px -5px black
+  border-radius: 5px
+
+//-----------------------------------------------------------------------------
+//        ЗАКЛАДКА
+.tab
+  position: relative
+  top: 10px
+  left: -160px
+  +gradient(bottom, #3B0987, #009CF6 , #009CF6)
+  width: 190px
+  height: 44px
+  border-radius: 0.4em/1em
+  box-shadow: 3px 4px 8px -2px black
+  padding-top: 10px
+  font-size: 1.5em
+  text-align: center
+  > div
+    position: absolute
+    top: 8px
+    right: -12px
+    width: 38px
+    height: 38px
+    +gradient(bottom right, #3B0987, #009CF6 , #009CF6)
+    border-top-right-radius: 5px
+    box-shadow: 8px -1px 8px -6px black
+    +transform-rotate(45deg)
+    div
+      width: 12px
+      height: 12px
+      position: absolute
+      top: 7px
+      right: 7px
+      border-radius: 6px
+      background-image: url(../img/paper.png)
+      +transform-rotate(-45deg)
+
+//-----------------------------------------------------------------------------
+//        БЛОК СТИКЕР
+.note
+  position: relative
+  width: 100%
+  padding: 1em
+  margin: 20px auto
+  background-color: #bde0ff
+  text-align: justify
+  box-shadow: inset 0 0 60px -20px blue
+  border-radius: 5px
+  p
+    text-indent: 20px
+    &:first-letter
+      font-size: 1.3em
+  div
+    position: absolute
+    top: 0
+    right: 0
+    border-style: solid
+    border-width: 10px
+    +border-radius(0,0,0,5px)
+    border-color: transparent transparent #57b0ff #57b0ff
+    background: url(../img/paper.png)
+    box-shadow: -2px 2px 2px 0px rgba(0,0,0,0.3), -2px 2px 2px 0px rgba(0,0,0,0.2)
+  &:before,
+  &:after
+    content: ""
+    position: absolute
+    z-index: -1
+    bottom: 15px
+    left: 10px
+    width: 50%
+    height: 20%
+    max-width: 300px
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7)
+    +transform-rotate(-3deg)
+  &:after
+    right: 10px
+    left: auto
+    +transform-rotate(3deg)
+#footer
+  .note
+    color: black
+    background-color: #605AB5
+    box-shadow: inset 0 0 60px -20px black
+    div
+      background-image: url(../img/dark_fish_skin.png)
+      border-color: transparent transparent #4F4A99 #4F4A99
