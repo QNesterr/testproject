@@ -1,10 +1,11 @@
 @import mixins
 .kartinka
   display: block
-  width: 70%
-  margin: 15px auto
-  box-shadow: 5px 5px 20px -5px black
-  border-radius: 5px
+  width: 340px
+  margin-left: 15px
+  margin-top: 10px
+  box-shadow: 5px 5px 20px 3px black
+  border-radius: 10px
 
 //-----------------------------------------------------------------------------
 //        ЗАКЛАДКА
@@ -18,6 +19,7 @@
   border-radius: 0.4em/1em
   box-shadow: 3px 4px 8px -2px black
   padding-top: 10px
+  font-family: open_sans
   font-size: 1.5em
   text-align: center
   > div
@@ -44,12 +46,14 @@
 //        БЛОК СТИКЕР
 .note
   position: relative
-  width: 100%
+  width: 80%
   padding: 1em
   margin: 20px auto
   background-color: #bde0ff
+  font-family: open_sans
+  font-size: 1em
   text-align: justify
-  box-shadow: inset 0 0 60px -20px blue
+  box-shadow: inset 0 0 50px -20px black
   border-radius: 5px
   p
     text-indent: 20px
@@ -62,7 +66,7 @@
     border-style: solid
     border-width: 10px
     +border-radius(0,0,0,5px)
-    border-color: transparent transparent #57b0ff #57b0ff
+    border-color: transparent transparent #57b0ff #57b0ff 
     background: url(../img/paper.png)
     box-shadow: -2px 2px 2px 0px rgba(0,0,0,0.3), -2px 2px 2px 0px rgba(0,0,0,0.2)
   &:before,
@@ -81,11 +85,3 @@
     right: 10px
     left: auto
     +transform-rotate(3deg)
-#footer
-  .note
-    color: black
-    background-color: #605AB5
-    box-shadow: inset 0 0 60px -20px black
-    div
-      background-image: url(../img/dark_fish_skin.png)
-      border-color: transparent transparent #4F4A99 #4F4A99

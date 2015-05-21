@@ -49,23 +49,30 @@ $(document).ready(function() {
 //-----------------------------------------------------------------------------
 //        СКРОЛЛ ЭФФЕКТ ДЛЯ ВЕРХНЕЙ ПАНЕЛИ
     $('#menu-panel').scroolly([
-                {
-                    from: 'doc-top + 100el',
-                    to: 'doc-bottom',
-                    direction: 1,
-                    css: {
-                        //'-transition': 'all 0.5s',
-                        top: '-50px'
-                    }
-                },
-                {
-                    from: 'doc-top',
-                    to: 'doc-bottom',
-                    direction: -1,
-                    css: {
-                        //'-transition': 'all 0.5s',
-                        top: '0px'
-                    }
-                }
-            ]);
+        {
+            to: 'con-bottom - 100el = top',
+            css: {
+                position: 'fixed',
+                top: '0px',
+                bottom: ''
+            }
+        },
+        {
+            from: 'con-bottom - 100el = top',
+            css: {
+                position: 'absolute',
+                top: '',
+                bottom: '0px'
+            }
+        }
+        ], $('#main'));
+
+    //---------------------------
+    setTimeout(function() {
+        $('#color').fadeIn(1200);
+    }, 3000);
+    $('.note').click(function() {
+        $(this).css({ 'background-color': '#fc89ac'});
+        $('#color1').fadeIn(1000);
+    });
 });

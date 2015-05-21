@@ -212,4 +212,13 @@ body {
     background-position: bottom left;
     background-repeat: no-repeat; }
 
-/*# sourceMappingURL=style.css.map */
+.note {
+  background-color: #f19cbb; }
+  .note p.color1,
+  .note p.color {
+    display: none; }
+
+#sleep {
+  display: none; }
+
+/*# sourceMappingURL=sleep.css.map */

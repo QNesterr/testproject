@@ -1,116 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-<meta charset="utf-8">
-<title>test page</title>
-<link rel="stylesheet" type="text/css" href="css/foundation.min.css">
-<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>
+		test
+	</title>
 <meta name="viewport" content="width=device-width, user-scalable=no">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 <script src="js/jquery.mobile.custom.min.js"></script>
 <script type="text/javascript" src="js/scroolly.js"></script>
-<script type="text/javascript" src="js/script.js"></script>
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	div {
+		position: relative;
+		width: 100%;
+		height: 1500px;
+	}
+	#one {
+		background-color: red;
+		height: 500px;
+	}
+	#two {
+		background-color: blue;
+	}
+	#menu {
+		position: fixed;
+		top: 0;
+		height: 80px;
+		background-color: black;
+	}
+</style>
+<script type="text/javascript">
+	$('#menu').scroolly([
+		{
+			to: 'con-bottom - 100el = top',
+			css: {
+				position: 'fixed',
+				top: '0px',
+				bottom: ''
+			}
+		},
+		{
+			from: 'con-bottom - 100el = top',
+			css: {
+				position: 'absolute',
+				top: '',
+				bottom: '0px'
+			}
+		}
+		], $('#one'));
+</script>
 </head>
-
 <body>
-	<!--<img class="kartinka" src="http://s3-ec.buzzfed.com/static/2014-03/enhanced/webdr06/31/18/anigif_original-grid-image-14733-1396303885-10.gif">-->
-	<!-- <div class="note">
-				<div></div>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus est minima blanditiis magni iusto voluptas, neque ducimus facilis accusantium cupiditate harum nostrum rerum commodi fugit laborum minus dolor facere impedit.
-				</p>
-			</div> -->
-	<!-- <div class="tab">ЗАКЛАДКА<div><div></div></div></div> -->
-	
-	<div id="side-bar">
-		<nav><a href="">Первый заголовок</a></nav><hr />
-		<nav><a href="">Раздел номер 2</a></nav><hr />
-		<nav><a href="">Третий уровень</a></nav><hr />
-		<nav><a href="">Дополнительно</a></nav><hr />
-		<nav><a href="">И здесь тоже..</a></nav>
-		<div class="swipe-me">swipe me!</div>
-	</div>
-	<div id="page">
-		<div id="main">
-			<!-- _____________________Верхняя панель________________________ -->
-			<div id="menu-panel">
-				<div class="menu-button">
-					<hr /><hr /><hr />
-				</div>
-				<img class="header-image" src="img/signature.svg">
-			</div>
-			<!-- _____________________Верхняя панель________________________ -->
-			<div class="row">
-			  <div class="medium-6 large-3 columns">
-			  	<div class="note">
-					<div></div>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus est minima blanditiis magni iusto voluptas, neque ducimus facilis accusantium cupiditate harum nostrum rerum commodi fugit laborum minus dolor facere impedit.
-					</p>
-				</div>
-			  </div>
-			  <div class="medium-6 large-3 columns">
-			  	<div class="note">
-					<div></div>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus est minima blanditiis magni iusto voluptas, neque ducimus facilis accusantium cupiditate harum nostrum rerum commodi fugit laborum minus dolor facere impedit.
-					</p>
-				</div>
-			  </div>
-			   <div class="medium-6 large-3 columns">
-			  	<div class="note">
-					<div></div>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus est minima blanditiis magni iusto voluptas, neque ducimus facilis accusantium cupiditate harum nostrum rerum commodi fugit laborum minus dolor facere impedit.
-					</p>
-				</div>
-			  </div>
-			  <div class="medium-6 large-3 columns">
-			  	<div class="note">
-					<div></div>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus est minima blanditiis magni iusto voluptas, neque ducimus facilis accusantium cupiditate harum nostrum rerum commodi fugit laborum minus dolor facere impedit.
-					</p>
-				</div>
-			  </div>
-			</div>
-			<div class="row">
-			  <div class="medium-6 large-3 columns">
-			  	<div class="note">
-					<div></div>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus est minima blanditiis magni iusto voluptas, neque ducimus facilis accusantium cupiditate harum nostrum rerum commodi fugit laborum minus dolor facere impedit.
-					</p>
-				</div>
-			  </div>
-			  <div class="medium-6 large-3 columns">
-			  	<div class="note">
-					<div></div>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus est minima blanditiis magni iusto voluptas, neque ducimus facilis accusantium cupiditate harum nostrum rerum commodi fugit laborum minus dolor facere impedit.
-					</p>
-				</div>
-			  </div>
-			  <div class="large-6 columns">
-			  	<div class="note">
-					<div></div>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus est minima blanditiis magni iusto voluptas, neque ducimus facilis accusantium cupiditate harum nostrum rerum commodi fugit laborum minus dolor facere impedit.
-					</p>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate aperiam dolore iste aut, blanditiis earum amet odit consequatur atque ad et commodi vitae corporis repudiandae sequi soluta, sunt perferendis labore!
-					</p>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam atque, nihil praesentium, commodi est mollitia alias totam ipsam, magnam ducimus animi aliquam quidem, aspernatur laudantium porro. Quo totam ad tenetur.
-					</p>
-				</div>
-			  </div>
-			</div>
-		</div>
-		<!-- ________________________Футер___________________________ -->
-		<div id="footer">
-		</div>
-	</div>
+	<div id="one"><div id="menu"></div></div>
+	<div id="two"></div>
 </body>
 </html>

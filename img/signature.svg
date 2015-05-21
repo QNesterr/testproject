@@ -53,31 +53,31 @@
          result="fbSourceGraphicAlpha"
          in="fbSourceGraphic"
          values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
-         id="feColorMatrix3354" />
+         id="feColorMatrix3870" />
       <feFlood
-         id="feFlood3356"
+         id="feFlood3872"
          flood-opacity="1"
          flood-color="rgb(0,0,0)"
          result="flood"
          in="fbSourceGraphic" />
       <feComposite
-         id="feComposite3358"
+         id="feComposite3874"
          in2="fbSourceGraphic"
          in="flood"
          operator="out"
          result="composite1" />
       <feGaussianBlur
-         id="feGaussianBlur3360"
+         id="feGaussianBlur3876"
          in="composite1"
-         stdDeviation="0.1"
+         stdDeviation="0.4"
          result="blur" />
       <feOffset
-         id="feOffset3362"
+         id="feOffset3878"
          dx="0.2"
          dy="0.2"
          result="offset" />
       <feComposite
-         id="feComposite3364"
+         id="feComposite3880"
          in2="fbSourceGraphic"
          in="offset"
          operator="atop"
@@ -99,7 +99,7 @@
      showgrid="false"
      units="px"
      inkscape:window-width="1366"
-     inkscape:window-height="706"
+     inkscape:window-height="746"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1" />
@@ -111,7 +111,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -120,13 +120,12 @@
      id="layer2"
      inkscape:label="Layer 2">
     <ellipse
-       transform="translate(0,-1002.3622)"
        style="fill:#3771c8"
        id="path3418"
-       cx="25.099524"
-       cy="1027.4635"
-       rx="24.96566"
-       ry="25.032593" />
+       cx="24.990946"
+       cy="25.047012"
+       rx="24.748505"
+       ry="24.761148" />
   </g>
   <g
      inkscape:label="Layer 1"
