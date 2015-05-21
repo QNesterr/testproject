@@ -1,32 +1,9 @@
-@font-face {
-  font-family: open_sans_bold;
-  src: url(../fonts/open-sans-bold.ttf); }
-@font-face {
-  font-family: open_sans;
-  src: url(../fonts/open-sans.ttf); }
-* {
-  margin: 0;
-  padding: 0; }
-
-html,
-body {
-  max-width: 667px; }
-
-#page {
-  padding-top: 80px; }
-
 .kartinka {
   display: block;
-  width: 340px;
-  margin-left: 15px;
-  margin-top: 10px;
-  box-shadow: 5px 5px 20px 3px black;
-  border-radius: 10px; }
-
-.header-image {
-  height: 80px;
-  margin-left: 100px;
-  margin-top: 3px; }
+  width: 70%;
+  margin: 15px auto;
+  box-shadow: 5px 5px 20px -5px black;
+  border-radius: 5px; }
 
 .tab {
   position: relative;
@@ -42,7 +19,6 @@ body {
   border-radius: 0.4em/1em;
   box-shadow: 3px 4px 8px -2px black;
   padding-top: 10px;
-  font-family: open_sans;
   font-size: 1.5em;
   text-align: center; }
   .tab > div {
@@ -77,15 +53,123 @@ body {
       -o-transform: rotate(-45deg);
       transform: rotate(-45deg); }
 
+.note {
+  position: relative;
+  width: 100%;
+  padding: 1em;
+  margin: 20px auto;
+  background-color: #bde0ff;
+  text-align: justify;
+  box-shadow: inset 0 0 60px -20px blue;
+  border-radius: 5px; }
+  .note p {
+    text-indent: 20px; }
+    .note p:first-letter {
+      font-size: 1.3em; }
+  .note div {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-style: solid;
+    border-width: 10px;
+    -webkit-border-radius: 0 0 0 5px;
+    -moz-border-radius: 0 0 0 5px;
+    -ms-border-radius: 0 0 0 5px;
+    -o-border-radius: 0 0 0 5px;
+    border-radius: 0 0 0 5px;
+    border-color: transparent transparent #57b0ff #57b0ff;
+    background: url(../img/paper.png);
+    box-shadow: -2px 2px 2px 0px rgba(0, 0, 0, 0.3), -2px 2px 2px 0px rgba(0, 0, 0, 0.2); }
+  .note:before, .note:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: 15px;
+    left: 10px;
+    width: 50%;
+    height: 20%;
+    max-width: 300px;
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    transform: rotate(-3deg); }
+  .note:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    transform: rotate(3deg); }
+
+#footer .note {
+  color: black;
+  background-color: #605AB5;
+  box-shadow: inset 0 0 60px -20px black; }
+  #footer .note div {
+    background-image: url(../img/dark_fish_skin.png);
+    border-color: transparent transparent #4F4A99 #4F4A99; }
+
+@font-face {
+  font-family: open_sans_bold;
+  src: url(../fonts/open-sans-bold.ttf); }
+@font-face {
+  font-family: open_sans;
+  src: url(../fonts/open-sans.ttf); }
+* {
+  margin: 0;
+  padding: 0; }
+
+html,
+body {
+  min-height: 667px;
+  background-image: url(../img/paper.png);
+  font-family: open_sans;
+  font-size: 1em;
+  line-height: 1.3; }
+
+#main {
+  padding-top: 50px;
+  position: relative;
+  opacity: 0.99;
+  overflow: hidden; }
+
+#menu-panel {
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  background-image: url(../img/dark_fish_skin.png);
+  box-shadow: 1px 1px 20px 2px black; }
+  #menu-panel .menu-button {
+    position: absolute;
+    top: 7px;
+    left: 12px;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto; }
+    #menu-panel .menu-button hr {
+      background-color: #c8c8c8;
+      height: 4px;
+      border: none;
+      margin-top: 6px; }
+  #menu-panel .header-image {
+    display: block;
+    height: 42px;
+    width: 42px;
+    margin: 4px auto; }
+
 #side-bar {
   z-index: 1;
   position: fixed;
   top: 0;
-  left: -230px;
+  left: -260px;
   width: 230px;
   height: 100%;
   background-image: url(../img/dark_fish_skin.png);
-  box-shadow: inset -2px 0px 30px -5px black; }
+  box-shadow: 2px 0px 30px 0 black; }
   #side-bar > hr {
     width: 210px;
     height: 1px;
@@ -132,64 +216,10 @@ body {
     background-position: bottom left;
     background-repeat: no-repeat; }
 
-#menu-panel {
-  z-index: 1;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 80px;
+#footer {
+  opacity: 0.99;
+  box-shadow: inset 0 10px 20px -10px black;
   background-image: url(../img/dark_fish_skin.png);
-  box-shadow: 1px 1px 20px 2px black; }
-  #menu-panel .menu-button {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 60px;
-    height: 60px;
-    margin: 0 auto; }
-    #menu-panel .menu-button hr {
-      background-color: #c8c8c8;
-      height: 4px;
-      border: none;
-      margin-top: 12px; }
-
-.note {
-  position: relative;
-  width: 80%;
-  padding: 1em;
-  margin: 20px auto;
-  background-color: #bde0ff;
-  font-family: open_sans;
-  font-size: 1em;
-  text-align: justify;
-  box-shadow: inset 0 0 50px -20px black;
-  border-radius: 4px; }
-  .note p {
-    text-indent: 20px; }
-    .note p:first-letter {
-      font-size: 1.3em; }
-  .note:before, .note:after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    bottom: 15px;
-    left: 10px;
-    width: 50%;
-    height: 20%;
-    max-width: 300px;
-    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
-    -webkit-transform: rotate(-3deg);
-    -moz-transform: rotate(-3deg);
-    -ms-transform: rotate(-3deg);
-    -o-transform: rotate(-3deg);
-    transform: rotate(-3deg); }
-  .note:after {
-    right: 10px;
-    left: auto;
-    -webkit-transform: rotate(3deg);
-    -moz-transform: rotate(3deg);
-    -ms-transform: rotate(3deg);
-    -o-transform: rotate(3deg);
-    transform: rotate(3deg); }
+  color: #bebebe; }
 
 /*# sourceMappingURL=style.css.map */
