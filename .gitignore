@@ -8,15 +8,8 @@ Desktop.ini
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
 
-# Thumbnails
-._*
-
 # Sass files
 *.sassc
 *.sass-cache*
-*.sass
-*.scss
 _*.css
-_*.sass
-_*.scss
 *.css.map
